@@ -96,6 +96,12 @@ public final class Pixelate {
 			g1 = ((int) pixels[pixel + 1] & 0xff);
 			r1 = ((int) pixels[pixel + 2] & 0xff);
 		
+			// cheat saturate by removing gray instead of adding
+		  gray = 0.2989*r1 + 0.5870*g1 + 0.1140*b1; 
+			b1 = saturate(b1, gray, 2);
+			g1 = saturate(g1, gray, 2);
+			r1 = saturate(r1, gray, 2);
+		
 			// pattern image
 			b2 = ((int) pattern[pixel] & 0xff);
 			g2 = ((int) pattern[pixel + 1] & 0xff);
@@ -105,12 +111,6 @@ public final class Pixelate {
 			bc = hardMix(b1,b2);
 			gc = hardMix(g1,g2);
 			rc = hardMix(r1,r2);
-			
-			// cheat saturate by removing gray instead of adding
-			gray = 0.2989*rc + 0.5870*gc + 0.1140*bc; 
-			bc = saturate(bc, gray, 400);
-			gc = saturate(gc, gray, 400);
-			rc = saturate(rc, gray, 400);
 		
 			/*
 			argb += bc; // blue
