@@ -30,25 +30,14 @@ To work on the sample code, you'll need to clone your project's AWS CodeCommit
 repository to your local computer. If you haven't, do that first. You can find
 instructions in the AWS CodeStar user guide.
 
-1. Install maven.  See https://maven.apache.org/install.html for details.
+* use homebrew to install maven: brew update, brew install maven, brew install tomcat7
 
-2. Install tomcat.  See https://tomcat.apache.org/tomcat-7.0-doc/setup.html for
-   details.
+1. Build and run the application.
 
-3. Build the application.
+        $ mvn compile
+        $ mvn clean package tomcat7:run
 
-        $ mvn -f pom.xml compile
-        $ mvn -f pom.xml package
-
-4. Copy the built application to the Tomcat webapp directory.  The actual
-   location of that directory will vary depending on your platform and
-   installation.
-
-        $ cp target/ROOT.war <tomcat webapp directory>
-
-4. Restart your tomcat server
-
-5. Open http://127.0.0.1:8080/ in a web browser to view your application.
+2. Open http://localhost:8080/ in a web browser to view your application.
 
 What Do I Do Next?
 ------------------

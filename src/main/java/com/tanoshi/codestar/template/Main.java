@@ -1,13 +1,12 @@
-package com.aws.codestar.projecttemplates;
+package com.tanoshi.codestar.template;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-import com.aws.codestar.projecttemplates.configuration.MvcConfig;
+import com.tanoshi.codestar.template.configuration.MvcConfig;
 
 /**
  * Utility to initialize the Spring MVC HelloWorld application.
  */
-public class HelloWorldAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class Main extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -26,6 +25,6 @@ public class HelloWorldAppInitializer extends AbstractAnnotationConfigDispatcher
         return new String[] {
                 "/"
         };
-    }
+    } 
 
 }
