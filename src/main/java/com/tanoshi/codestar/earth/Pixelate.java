@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 
-import net.coobird.thumbnailator.*;
+import net.coobird.thumbnailator.Thumbnails;
 
 public final class Pixelate {
 	

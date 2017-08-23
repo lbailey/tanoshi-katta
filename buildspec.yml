@@ -47,6 +47,7 @@ artifacts:
     - 'ROOT/WEB-INF/lib/spring-expression-4.2.6.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-web-4.2.6.RELEASE.jar'
     - 'ROOT/WEB-INF/lib/spring-webmvc-4.2.6.RELEASE.jar'
+    - 'ROOT/WEB-INF/lib/thumbnailator-0.4.8.jar'
     - 'ROOT/WEB-INF/views/index.jsp'
     - 'ROOT/resources/scripts.js'
     - 'ROOT/resources/styles.css'
